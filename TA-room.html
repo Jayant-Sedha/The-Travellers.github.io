@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lunasima&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="TA.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<style>
+    body{
+        height: 10vh;
+        width: 100%;
+    }
+    .dates {
+        background-color: rgb(231, 231, 231);
+    }
+
+    #toursroom {
+        margin-top: 30px;
+        height: 140px;
+        width: 1300px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: grid;
+        grid-template-columns: repeat(15, 100px);
+        grid-template-rows: 100px;
+        grid-gap: 10px;
+    }
+
+    .dates {
+        border-radius: 7px;
+        text-align: center;
+    }
+
+
+    h1 {
+        margin-top: 60px;
+        font-family: Playfair Display, serif;
+    }
+
+    #right-contentroom p {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    #left-contentroom, #a-room{
+        text-decoration: none;
+        color: black;
+    }
+
+    #main2 {
+        height: 50vh;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    #right-contentroom {
+        height: 100%;
+        width: 50%;
+        float: left;
+       margin-bottom: 44.5px;
+    }
+
+    #left-contentroom {
+        height: 100%;
+        width: 50%;
+        float: right;
+       
+    }
+
+    #left-contentroom #numberroom {
+        color: darkblue;
+        display: inline-block;
+        line-height: 25px;
+        padding-bottom: 5px;
+    }
+
+    #room1 {
+        width: 90%;
+        height: 25%;
+        background-color: rgb(227, 218, 218);
+        position: relative;
+        top: 10px;
+        left: 15px;
+        border-radius: 10px;
+        padding: 10px;
+
+    }
+
+    #btn1room,
+    #btn2room {
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 100%;
+    }
+
+    #prices {
+        height: 30px;
+        width: 90px;
+        background-color: purple;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        border-top: 2px solid blue;
+        margin-top: 5px;
+    }
+
+    #resultroom {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    h3 {
+        margin-left: 20px;
+        margin-bottom: 0px;
+    }
+
+    #room2 {
+        width: 90%;
+        height: 12%;
+        background-color: rgb(227, 218, 218);
+        position: relative;
+        top: 25px;
+        left: 15px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    #arrow {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: 9px;
+        right: 3px;
+        border: none;
+    }
+
+    #booknowroom{
+        width: 150px;
+        margin-top: 15px;
+        margin-left: 220px;
+    }
+
+   
+
+   
+</style>
+
+<body>
+
+    <div id="contentMenu">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+          <div class="container-fluid" id="nav">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://p7.hiclipart.com/preview/78/715/784/flight-air-travel-airline-ticket-travel-agent-dubai-travels-agency.jpg"
+                alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+              The Travellers
+            </a>
+            <ul id="text">
+              <li  ><a href="TA.html">Home</a></li>
+              <li><a href="TA-about.html">About Us</a></li>
+              <li><a href="TA-contact.html">ContactUs</a></li>
+              <li class="active"><a href="">Services</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="nav2">
+    
+              <a href="TA-login.html"><span class="material-symbols-outlined">
+                  login</span></a>
+              <p>log-in</p>
+    
+              <a href="TAsignup.html"><span class="material-symbols-outlined">
+                  person
+                </span></a></li>
+              <p>sign-up</p>
+            </ul>
+          </div>
+        </nav>
+    
+      </div>
+
+    <div id="main1room" class="container">
+        <h1 class="text-xl font-medium mb-3 lg:text-3xl">Choose Your Date</h1>
+        <div id="toursroom">
+
+                <div id="div1room" onclick="div1()" class="dates">
+                    <br>
+                    Mon <br>
+                    15 Sep,2023
+                </div>
+            
+                <div id="div2room" onclick="div2()" class="dates">
+                    <br>
+                    Tue <br>
+                    17 Sep,2023
+                </div>
+
+                <div id="div3room" class="dates">
+                    <br>
+                    Wed<br>
+                    20 Sep,2023
+                </div>
+           
+                <div id="div4room" class="dates">
+                    <br>
+                    Thu <br>
+                    23 Sep,2023
+                </div>
+            
+                <div id="div5room" class="dates">
+                    <br>
+                    Fri <br>
+                    25 Sep,2023
+                </div>
+            
+                <div id="div6room" class="dates">
+                    <br>
+                    Sat <br>
+                    28 Sep,2023
+                </div>
+            
+                <div id="div7room" class="dates">
+                    <br>
+                    Sun <br>
+                    30 Sep,2023
+                </div>
+            
+                <div id="div8room" class="dates"><br>
+                    Mon <br>
+                    2 Oct,2023
+                </div>
+           
+                <div id="div9room" class="dates">
+                    <br>
+                    Tue <br>
+                    5 Oct,2023
+                </div>
+           
+                <div id="div10room" class="dates">
+                    <br>
+                    Wed <br>
+                    8 Oct,2023
+                </div>
+           
+                <div id="div11room" class="dates">
+                    <br>
+                    Thu <br>
+                    12 Oct,2023
+                </div>
+            
+                <div id="div12room" class="dates">
+                    <br>
+                    Fri <br>
+                    15 Oct,2023
+                </div>
+            
+                <div id="div13room" class="dates">
+                    <br>
+                    Sat <br>
+                    17 Oct,2023
+                </div>
+            
+                <div id="div14room" class="dates">
+                    <br>
+                    Sun <br>
+                    22 Oct,2023
+                </div>
+            
+                <div id="div15room" class="dates">
+                    <br>
+                    Mon <br>
+                    24 Oct,2023
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="container" id="main2room">
+        <div id="right-contentroom">
+            <p style="color: black;">Bank offers</p>
+            <b>Bank Offer</b> Flat ₹200 off on HDFC Bank Credit/Debit Card on 3 months EMI Txns, Min Txn Value ₹10,000
+            <b>T&C</b> <br>
+
+            <b>Bank Offer</b> Flat ₹500 off on HDFC Bank Credit/Debit Card on 6 months EMI Txns, Min Txn Value ₹10,000
+            <b>T&C</b><br>
+
+            <b>Bank Offer</b> Flat ₹500 off on HDFC Bank Credit/Debit Card on 9 months EMI Txns, Min Txn Value ₹10,000
+            <b>T&C</b> <br>
+
+            <b>Bank Offer</b> Flat ₹450 off on HDFC Bank Credit/Debit Card on 3 months EMI Txns, Min Txn Value ₹15,000
+            <b>T&C</b> <br>
+
+            <b>Bank Offer</b> Flat ₹900 off on HDFC Bank Credit/Debit Card on 6 months EMI Txns, Min Txn Value ₹15,000
+            <b>T&C</b> <br>
+
+            <b>Bank Offer</b> Flat ₹500 off on HDFC Bank Credit/Debit Card on 12 months and above EMI Txns, Min Txn
+            Value
+            ₹10,000 <b>T&C</b> <br>
+
+            <b>Bank Offer</b> Flat ₹450 off on HDFC Bank Credit/Debit Card on 3 months EMI Txns, Min Txn Value ₹15,000
+            <b>T&C</b> <br>
+        </div>
+
+        <div id="left-contentroom">
+            <h3>Room 1</h3>
+            <div id="room1">
+
+                <button onclick="sub()" id="btn1room"> <img id="imgbtn"
+                        src="https://icon-library.com/images/subtract-icon/subtract-icon-14.jpg"
+                        style="height: 100%; width: 100%; border-radius: 100%;" alt=""></button>
+
+                <div id="numberroom">0</div>
+
+                <button onclick="add()" id="btn2room"><img src="https://cdn-icons-png.flaticon.com/512/32/32360.png"
+                        style="height: 100%; border-radius: 100%; width: 100%;" alt=""></button> <br>
+
+                <button id="prices" onclick="prices()">See Prices</button>
+
+                <p id="resultroom"></p>
+            </div>
+
+            <div id="room2">
+                <h4>Room 2</h4>
+                <span id="arrow" class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
+
+            <div id="room2">
+                <h4>Room 3</h4>
+                <span id="arrow" class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
+            <div id="room2">
+                <h4>Home Stay</h4>
+                <span id="arrow" class="material-symbols-outlined">
+                    expand_more
+                </span>
+            </div>
+            <a id="a-room" href="TA-login.html"> <button id="booknowroom" class="btn btn-primary">Book Now</button></a> <br> <br>
+
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="left-content">
+            <div id="outer">
+                <div id="location" class="doc">
+                    <img src="https://png.pngtree.com/png-vector/20190508/ourmid/pngtree-vector-location-icon-png-image_1028445.jpg"
+                        style="height: 100%; width: 100%; border-radius: 100px;" alt="">
+                </div>
+                <div id="location2" class="doc">
+                    <p id="p1">Shop no. 45, Near D Park <br> Model Town, Rohtak</p>
+                </div>
+                <div id="phone" class="doc">
+                    <img src="https://img.freepik.com/free-icon/telephone-symbol-button_318-41893.jpg"
+                        style="height: 100%; width: 100%; border-radius: 100px;" alt="">
+                </div>
+                <div id="phone2" class="doc">
+                    <p id="p2">+91 8708005090</p>
+                </div>
+                <div id="mail"> <img
+                        src="https://static.vecteezy.com/system/resources/previews/022/168/458/original/mail-icon-isolated-on-transparent-background-mail-transparency-logo-concept-free-png.png"
+                        alt="" style="height: 100%; width: 100%; border-radius: 50px;"></div>
+                <div id="mail2">
+                    <p id="p2">www.thetravellers.com</p>
+                </div>
+      
+            </div>
+      
+        </div>
+        <div id="right-content">
+            <div id="outer2">
+                <div id="about">
+                    <h2>The Travellers</h2>
+                    <p> Launched in 2007, The Travelleers is a technology company focused on empowering Indian
+                        travellers to plan, book and manage their trips across rail, air, buses and hotels. We assist
+                        travellers in making smarter travel decisions by leveraging artificial intelligence, machine
+                        learning, and data science led innovations on our OTA platforms, comprising our websites and
+                        mobile applications.
+                    </p>
+                </div>
+            </div>
+      
+            <div id="socialicons">
+                <a id="youtube" href="https://www.youtube.com/channel/UCw-mEj_42SyKqsyvWXgsMtg">
+                    <div id="youtube"> <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEUAAAD///96enrQ0NDT09PPz8/w8PB0dHSysrJ2dna2trb4+Pi5ubkdHR1MTEzJycnl5eXd3d1sbGwzMzPDw8MmJiZdXV2Hh4cUFBSBgYGbm5tAQECVlZUrKyukpKRFRUU6OjqqqqoNDQ0ZGRlnZ2dWVlZgYGDBb4sMAAAETklEQVR4nO2c63aqMBBGU4uoKIigoEi91fb9H/GA2NYL9CzDFzN0fftnb7q7MJnMTEYpQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQkgdS3/xFq+D5NhL881+OBx63mQymc+n037B6wnngtMXym9Np/N58ZOeV/zOfpOnvWMSrOO3hb+0rVRIxUESrTKv78xC131BM3bDmdP3slWUBPGTdf0onzhh6I7hVr/Yhs4kjxZP8VvNniZ2zyw17pdZ1KvYHEz6DfAft8dxe+YE97blzgxNCb7aNvtmZkZwatvrglcTgp5tqyvmeMHIttMN8OXmYNvoDvTuP7EtdMcUKxjb9qlhDTUc2tapAbvYSIhlbnF9oOCHbZtajkDDvW2ZWiZAQ8e2TC3I2O15Z92HwJ38Je4VJQHMcGVbpYEcZihxNyzBLTWSzk2XODBDift9yRhmaNukEZSg1KX05WULMkx038DG9Ac4AhlqbxYj9WE2fYzKD+e6b6DMNCQmHVEbonaeu8qljEKk1BV7kKH2hv+VLeqZ2m5QW772evGTD0vNxO6oLV/7KbvM+OUmHF2QofYzdpXTPGzwjrIMlfI3SLuSMabS9q79v7/LS7+DSwPjN4jhAmdYRIBzqGEMMYyRhkptkY6YrPBa+/UbqidbXGILE3oHaMPiT6JCuQ+IoX46+JcK2BHjmEAMP00YKjVAhKuYtLd+bfQ/VUxAuIo5IBozLMLVto4Yw4E5w9bh6kC+oVq26rLqgqFqVdnqiKFaaJ+xu2Ko1E6zE6I7hoWjVrg66pBhEf/2bRmOnmRYxIcP9wZ2zTB4+NDRLUOdQ1WXDPUOxt0xXGse/LuylvraCapu7Id+izaBLhi2S6J2wLBlIly8YetihnBDQEFKtOEKkYnCGBrJ00AybYIzUUdU4RtjCM+XfuKaFz4hhuCcd4Jsx8Vk9aF1izX2ehimw3Sr/fp3hmt0kxSmurZD1Q91003NjHcQQ1CFdGHgYpGkKvdhDxT7Zgy6VNK+FwPfhVEhpdtkmZm6zYAybNkTZaQbqiIEGWpvYaWhoY62ij7IUHsRHKiV2SZ4D2SovUx4pgdMbECG2j3CxkH1CKe2RRpB9XkfbYs0grpjqd/2ZZodyPDv35mResESFtJIGmpyDWrDlzb04wfUhi93u8ANjZK6mOLmRsgbbFIBnIllc4BZM8j7+DKvOiMHYumnvU2CSXhXLCXedXahwxTljRjCDv5Qamdbp4Yd1FBBL/NAQM8z820L3fEONlQ920Y3YLqhrpD1nGKXmTMaDa7GwJ2brpATu+GGmtwgJXhDXcOvYSQhtnExTTRNGCqTPUBm1K8k/eOzoEsWf3ye9zdXM9nxtjZnstfqnufqR700q8bqe+VY/fNc/f7tWH3na6z+aa7+vJyrfxqsn6W9SM5cfUIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEJE8g9ShVzGihgOCwAAAABJRU5ErkJggg=="
+                            alt="" style="height: 100%; width: 100%; border-radius: 10px;"></div>
+                </a>
+      
+      
+                <a id="insta" href="https://www.instagram.com/">
+                    <div id="insta"><img
+                            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBASEBAQEhAWERURDxAPEBAPEBAVFhEWFhUVFRMZHCggGhomJxMZITEhJSkrLi4xGCA2ODM4NygtLi0BCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABwgCBgEDBQT/xABNEAABAwIBBgcJDAgGAwAAAAABAAIDBBEFBgcSIVFhEzEyQXGBkQgiUnShsbPB0hQXJDVCVHJzkpOy0RUjJVViZIKjMzRDRYTDRKLC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AINREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARFKGQOZ2prWtnrHOpaY62t0fhEo2hp1MG89nOgi9elQYBWT2MFLUSg8Rjhke37QFlavJ7ILDKIDgKSPTH+rKBLKf63cXVZbKAgqKzN3jB4sOqetlvOuwZtcaP8At8/XoD1q26IKlDNjjX7vm7YvaWYzXY3+75ftw+2rZIgqYc1+N/u+X7cPtLE5ssa/d83bH7StqiCo5zbYyP8Ab6jqDT610z5A4uwXdh1VbdE53murfIgpLW4fPCbTQyxHZLG+M9jgF8yu/NCx4LXta5p42vaHA9RWjZT5pMKqwSyL3LKeKSmswX/ij5J7Ad6CrKLbsus31bhjryt4SnJsypjB4M7nD5Dtx6iVqKAiIgIiICIiAiIgIiICIiAiL3ch8ANfX01ML6L33lI+TG3vnnsBHSQgk3Mjm5bKGYjWsuy96OF4711j/jOB4xfkjdfYp5C6qanZGxkcbQ1jGhjGjUGtAsAOxRxnjzgOoI201K4Cslbcv1H3PHrGnbwjYgdBOxBsmVeX2HYf3tRODLbVBF+sm62jkje6yjjEM/uv4PQauZ081j9loPnUKTSuc5znuc57jdznEuc4njJJ1krpLkErVGfbFCe8gomDeyZ57eEHmXyuz3YxspB0QO9b1GWk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OVgoqB0MbvhNSDFGAe+ZGdUknYbDedyCvuWeLe68QrKgG7ZJ3Fh2sadFnkaF4JXY4rqQEREBERAREQEREBERAREQb3mvzhyYXKWSAyUUjryxjlRni4Rm/aOeys3g+LQVULZqaVksThqcw36QRzEc4OtUpXs5NZT1lBJwlJO+M/KZyo37nMOo9PGguLU07JGlkjGvYeU17Q5p6QVqeI5r8GmuXUMbDthL4fIwgLQ8n8/bbBtdSODtQMtKQWnaeDcbj7RW7UGdjBZf/MEZ2Txyx+Utt5UHl1GY/B3cn3VH9CcH8TSvgfmDw7mqq0dLoD/1hb3DlthT+TiNGf8AkRjzlfY3KKhPFW0h6KiH2kEa+8HQfO6z+z7Ce8HQfO6z+z7Ckz9PUfzum+/i/NP09R/O6b7+L80EZ+8HQfO6z+z7C594Og+d1n9n2FJf6eo/ndN9/F+afp6j+d0v38X5oI4izC4YOVUVzt2nA0ejXpU2ZXBm20o55PpzvF/s2W4SZTUDeVW0g/5EPtL4Z8vcIZfSxGk1cYbMx57G3Qc4TkJhVMQYKGBrhxPczhXj+p9ytjWgYhniwWIHRqHzEfJhhkN+twA8q0DKTPpUyBzKCnbTg6uGmIll4jyWDvWnp0kEtZa5aUmGQl87wZSDwNO0jhZTuHM3a46gquZUY/PX1MlTUEF7tTWjkxsHJY3cL+cr4cRr5p5HSzyvllcbufI4uces825fI5yA4rBEQEREBERAREQEREBERAREQEREHIK5DliiDPSQEbFgiDO4S4WCIM7jYubjYutEGdxsXIcF1og7NNcF6wRBkXLFEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH//2Q=="
+                            alt="" style="height: 100%; width: 100%; border-radius: 10px;"></div>
+                </a>
+            </div>
+      
+        </div>
+      </div> 
+      
+      <div id="footer2">
+        <p id="lastline">Copyright@2023 The Travellers Company Pvt. ltd. All rights Reserved <br>
+        Designed and devoloped by Jayant Computer Solutions</p>
+      </div>
+
+</body>
+<script>
+    count=0
+    function add(){
+        count=count+1
+        document.getElementById("numberroom").innerHTML=count
+
+        if(count>=4)
+        {
+           document.getElementById("btn2room").disabled=true
+        }
+
+    }
+
+    function sub(){
+        count=count-1
+        document.getElementById("numberroom").innerHTML=count
+
+        if(count<=0)
+        {
+            document.getElementById("numberroom").innerHTML=0
+           document.getElementById("btn1room").style.display="none"
+        //    document.getElementById("imgbtn").style.display="none"
+        }
+
+    }
+
+    function prices(){
+        // var y = document.getElementById("prices").value
+
+        if(count==1){
+            document.getElementById("resultroom").innerHTML="₹1500 per person"     
+        }
+        if(count==2){
+            var total = count*1400
+            document.getElementById("resultroom").innerHTML="₹1400 per person" +"--Total fare is " + total
+        }
+        if(count==3){
+            var total = count*1200
+            document.getElementById("resultroom").innerHTML="₹1200 per person"+"--Total fare is " + total  
+        }
+        if(count==4){
+            var total = count*1000
+            document.getElementById("resultroom").innerHTML="₹1000 per person" +"--Total fare is " + total    
+        }
+
+    }
+
+  
+
+</script>
+
+</html>
